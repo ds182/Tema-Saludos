@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saludos y Despedidas en Inglés</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Fondo negro */
+            color: white; /* Texto en blanco para resaltar */
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1 {
+            background-image: url('https://i.ibb.co/WWZfW4D/CLASE-MUESTRA-5.png'); /* Imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            font-size: 48px;
+            text-align: center;
+            padding: 50px;
+            border-radius: 10px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        h2 {
+            color: #f0f0f0; /* Color de subtítulos */
+        }
+        .menu {
+            background-color: #444;
+            padding: 10px;
+        }
+        .menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        .menu ul li {
+            margin: 0;
+        }
+        .menu ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .menu ul li a:hover {
+            color: #ff6347;
+        }
+        section {
+            margin-bottom: 50px;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 5px;
+        }
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px;
+            background-color: #444;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        p {
+            font-size: 16px;
+        }
+        ul {
+            font-size: 16px;
+        }
+        .video-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Saludos y Despedidas en Inglés</h1>
+
+<div class="menu">
+    <ul>
+        <li><a href="#greetings">Saludos</a></li>
+        <li><a href="#farewells">Despedidas</a></li>
+    </ul>
+</div>
+
+<div class="container">
+    <section id="greetings">
+        <h2>Saludos en Inglés</h2>
+        <p>Un saludo es lo que dices cuando ves a alguien. En inglés, usamos diferentes saludos según el momento del día o a quién estamos saludando. Aquí tienes algunos ejemplos:</p>
+        <ul>
+            <li><strong>Hello</strong> - Esto es como decir "Hola" en español. Lo puedes usar en cualquier momento del día.</li>
+            <li><strong>Good morning</strong> - Significa "Buenos días" y lo usamos por la mañana.</li>
+            <li><strong>Good afternoon</strong> - Significa "Buenas tardes" y lo usamos después del mediodía.</li>
+            <li><strong>Good evening</strong> - Significa "Buenas noches", pero solo para saludar, no para despedirse.</li>
+            <li><strong>Hi</strong> - Es una manera más informal de decir "Hello". Lo puedes usar con amigos.</li>
+            <li><strong>Hey</strong> - Es todavía más informal, como decir "¡Hola!" con amigos cercanos.</li>
+        </ul>
+    </section>
+
+    <section id="farewells">
+        <h2>Despedidas en Inglés</h2>
+        <p>Cuando te despides de alguien, puedes usar diferentes palabras en inglés, igual que en español. Aquí tienes algunas formas comunes de decir adiós:</p>
+        <ul>
+            <li><strong>Goodbye</strong> - Esto es como decir "Adiós". Lo puedes usar en cualquier situación.</li>
+            <li><strong>See you later</strong> - Significa "Nos vemos más tarde". Es algo que le dices a alguien que verás después.</li>
+            <li><strong>Take care</strong> - Significa "Cuídate". Lo usamos para despedirnos cuando queremos que la otra persona se cuide.</li>
+            <li><strong>Bye</strong> - Es una manera corta y rápida de decir "Goodbye". Lo usamos mucho con amigos o familia.</li>
+            <li><strong>See you soon</strong> - Significa "Nos vemos pronto". Lo dices cuando esperas ver a esa persona en poco tiempo.</li>
+            <li><strong>Farewell</strong> - Esta es una manera muy formal de decir "Adiós" que no se usa mucho hoy en día, pero es buena saberla.</li>
+        </ul>
+    </section>
+
+    <div class="video-container">
+        <h2>Video Explicativo</h2>
+        <iframe src="https://www.youtube.com/embed/KfzCQQJLjko" allowfullscreen></iframe>
+    </div>
+</div>
+
+<button id="scrollToTopBtn">Volver al Inicio</button>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        scrollToTopBtn.addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+
+        var menuLinks = document.querySelectorAll('.menu li a');
+        menuLinks.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                var targetId = this.getAttribute('href').substring(1);
+                var targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
